@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - Reveal-SDK (13)
+  - SwiftHEXColors (1.1.1)
+
+DEPENDENCIES:
+  - AlamofireImage (~> 3.3)
+  - Reveal-SDK
+  - SwiftHEXColors
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Reveal-SDK: ccc2b0f8014965ea448b7534a7c2c8da232b75e8
+  SwiftHEXColors: 9681e756dc78a99ae97f277165b3f5e33b087553
+
+PODFILE CHECKSUM: 68509c394d7e3b3a1b590a8074f24c6f6ccfa6c5
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Rijst met chorizo ",
+    "number_of_persons": 4,
+    "minutes": 30,
+    "image": "https://static.ah.nl/static/recepten/img_061470_890x594_JPG.jpg"
+  },
+  {
+    "title": "Pasta met brocoli",
+    "number_of_persons": 2,
+    "minutes": 20,
+    "image": "https://www.lekkerensimpel.com/wp-content/uploads/2015/09/IMG_2877.jpg"
+  },
+  {
+    "title": "Boerenkool",
+    "number_of_persons": 3,
+    "minutes": 35,
+    "image": "http://kookidee.ptcloud.nl/cms/wp-content/uploads/2015/10/klassieke-stamppot-boerenkool-met-rookworst-02.jpg"
+  }
+]
