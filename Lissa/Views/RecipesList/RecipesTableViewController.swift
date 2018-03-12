@@ -29,4 +29,10 @@ class RecipesTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? RecipeCell else { return }
+        
+//        cell.bot
+    }
+    
 }

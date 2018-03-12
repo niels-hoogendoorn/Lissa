@@ -30,6 +30,7 @@ class RecipeCell: UITableViewCell {
         super.awakeFromNib()
         
         createGradientLayer()
+        contentContainer.makeCard()
     }
     
     override func layoutSubviews() {
