@@ -14,9 +14,9 @@ extension UIView {
     func makeCard() {
         applyShadow(
             shadowColor: UIColor.black,
-            shadowOffset: CGSize(width: 0, height: 16),
+            shadowOffset: CGSize(width: 0, height: 2),
             shadowOpacity: 0.1,
-            shadowRadius: 8,
+            shadowRadius: 4,
             cornerRadius: 4
         )
     }
