@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6147EA8205A54D500C4BE8C /* RecipeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6147EA7205A54D500C4BE8C /* RecipeDetailTableViewController.swift */; };
+		A6147EAA205A54EA00C4BE8C /* RecipeDetailTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6147EA9205A54EA00C4BE8C /* RecipeDetailTableViewController+DataSource.swift */; };
+		A6147EAC205A550E00C4BE8C /* RecipeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6147EAB205A550E00C4BE8C /* RecipeDetailCell.swift */; };
 		A63E6D98204DEC7500965192 /* RecipesTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63E6D97204DEC7500965192 /* RecipesTableViewController+DataSource.swift */; };
 		A63E6D9C204DF03A00965192 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63E6D9B204DF03A00965192 /* Recipe.swift */; };
 		A66D20C82056676000471B91 /* UIView+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66D20C72056676000471B91 /* UIView+CALayer.swift */; };
+		A6802629205840B10074A6C0 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6802628205840B10074A6C0 /* Ingredient.swift */; };
 		A68770B5204C915D000528C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68770B4204C915D000528C0 /* AppDelegate.swift */; };
 		A68770BA204C915D000528C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A68770B8204C915D000528C0 /* Main.storyboard */; };
 		A68770BC204C915D000528C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68770BB204C915D000528C0 /* Assets.xcassets */; };
@@ -25,9 +29,13 @@
 		2150970E1DD58D6396EB2012 /* Pods-Lissa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lissa.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lissa/Pods-Lissa.release.xcconfig"; sourceTree = "<group>"; };
 		710D4FDC4A215266DAB3C754 /* Pods_Lissa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lissa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87CF88AB68FE9A3738DABD90 /* Pods-Lissa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lissa.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lissa/Pods-Lissa.debug.xcconfig"; sourceTree = "<group>"; };
+		A6147EA7205A54D500C4BE8C /* RecipeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailTableViewController.swift; sourceTree = "<group>"; };
+		A6147EA9205A54EA00C4BE8C /* RecipeDetailTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipeDetailTableViewController+DataSource.swift"; sourceTree = "<group>"; };
+		A6147EAB205A550E00C4BE8C /* RecipeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailCell.swift; sourceTree = "<group>"; };
 		A63E6D97204DEC7500965192 /* RecipesTableViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecipesTableViewController+DataSource.swift"; sourceTree = "<group>"; };
 		A63E6D9B204DF03A00965192 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		A66D20C72056676000471B91 /* UIView+CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CALayer.swift"; sourceTree = "<group>"; };
+		A6802628205840B10074A6C0 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		A68770B1204C915D000528C0 /* Lissa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lissa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68770B4204C915D000528C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A68770B9204C915D000528C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +69,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A6147EA6205A54BB00C4BE8C /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				A6147EA7205A54D500C4BE8C /* RecipeDetailTableViewController.swift */,
+				A6147EA9205A54EA00C4BE8C /* RecipeDetailTableViewController+DataSource.swift */,
+				A6147EAB205A550E00C4BE8C /* RecipeDetailCell.swift */,
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
 		A6662FAC20566559000E9E08 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A63E6D9B204DF03A00965192 /* Recipe.swift */,
+				A6802628205840B10074A6C0 /* Ingredient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -88,6 +107,7 @@
 		A6662FAF205665EA000E9E08 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6147EA6205A54BB00C4BE8C /* RecipeDetail */,
 				A6662FB020566620000E9E08 /* RecipesList */,
 				A68770B8204C915D000528C0 /* Main.storyboard */,
 				A68770BD204C915D000528C0 /* LaunchScreen.storyboard */,
@@ -281,13 +301,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6147EA8205A54D500C4BE8C /* RecipeDetailTableViewController.swift in Sources */,
 				A68770B5204C915D000528C0 /* AppDelegate.swift in Sources */,
+				A6802629205840B10074A6C0 /* Ingredient.swift in Sources */,
 				A6FC10212055932900C6DF77 /* recipesJson.swift in Sources */,
+				A6147EAC205A550E00C4BE8C /* RecipeDetailCell.swift in Sources */,
 				A6FC10232055994800C6DF77 /* RecipeCell.swift in Sources */,
 				A63E6D98204DEC7500965192 /* RecipesTableViewController+DataSource.swift in Sources */,
 				A66D20C82056676000471B91 /* UIView+CALayer.swift in Sources */,
 				A63E6D9C204DF03A00965192 /* Recipe.swift in Sources */,
 				A68770C7204C9CC6000528C0 /* RecipesTableViewController.swift in Sources */,
+				A6147EAA205A54EA00C4BE8C /* RecipeDetailTableViewController+DataSource.swift in Sources */,
 				A68770C9204C9DAD000528C0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

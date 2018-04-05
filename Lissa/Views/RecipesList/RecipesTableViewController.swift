@@ -19,14 +19,15 @@ class RecipesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = Constants.lissaBlue
-        recipeGeneratorButton.backgroundColor = Constants.lissaPink
         
+        recipeGeneratorButton.backgroundColor = Constants.lissaPink
         recipeGeneratorButton.layer.cornerRadius = 4
+        
         fetchRecipes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+//        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -43,5 +44,19 @@ class RecipesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 16
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let identifier = segue.identifier else { return }
+        
+        if identifier == "to_recipe_detail" {
+            return
+        }
+        
+        guard let vc = segue.destination as? RecipeDetailTableViewController else {
+            return
+        }
+        
     }
 }

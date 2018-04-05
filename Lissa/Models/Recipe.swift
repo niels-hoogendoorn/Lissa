@@ -9,15 +9,19 @@
 import Foundation
 
 struct Recipe: Decodable {
+    let id: Int!
     let title: String!
     let numberOfPersons: Int!
     let minutes: Int!
     let imageUrl: String!
+    let ingredients: [Ingredient]?
     
-    init(title: String, numberOfPersons: Int, minutes: Int, imageUrl: String) {
+    init(id: Int, title: String, numberOfPersons: Int, minutes: Int, imageUrl: String, ingredients: [Ingredient]) {
+        self.id = id
         self.title = title
         self.numberOfPersons = numberOfPersons
         self.minutes = minutes
         self.imageUrl = imageUrl
+        self.ingredients = ingredients
     }
 }

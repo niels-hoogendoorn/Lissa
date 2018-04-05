@@ -13,7 +13,7 @@ class RecipeCell: UITableViewCell {
     
     @IBOutlet weak var contentContainer: UIView!
     @IBOutlet weak var imageContainer: UIView!
-    @IBOutlet weak var imageViewer: UIImageView!
+    @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var imageLoaderIndicator: UIActivityIndicatorView!
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -43,11 +43,11 @@ class RecipeCell: UITableViewCell {
         let colorTop = UIColor.clear
         let colors = [colorTop, colorBottom]
         gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.imageViewer.bounds
+        gradientLayer.frame = self.recipeImageView.bounds
         
         gradientLayer.colors = colors.map({$0.cgColor})
         gradientLayer.startPoint = CGPoint(x:0.0, y:0.0)
         gradientLayer.endPoint = CGPoint(x:0.0, y:1.4)
-        self.imageViewer.layer.addSublayer(gradientLayer)
+        self.recipeImageView.layer.addSublayer(gradientLayer)
     }
 }

@@ -17,16 +17,16 @@ extension RecipesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return recipes.count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return recipes.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath)
-        
+
         guard let recipeCell = cell as? RecipeCell else { return cell }
         
         guard
@@ -34,9 +34,9 @@ extension RecipesTableViewController {
             let numberOfPersons = recipes[indexPath.row].numberOfPersons,
             let minutes = recipes[indexPath.row].minutes,
             let imageUrl = recipes[indexPath.row].imageUrl
-        else { return cell }
+        else { return UITableViewCell() }
         
-        loadImage(imageUrl: imageUrl, cell: recipeCell)
+        loadImageInView(imageUrl: imageUrl, cell: recipeCell)
         recipeCell.personLabel.text = "\(numberOfPersons) persons"
         recipeCell.timeLabel.text = "\(minutes) minutes"
         recipeCell.titleLabel.text = "\(title)"
@@ -44,13 +44,13 @@ extension RecipesTableViewController {
         return recipeCell
     }
     
-
-    
-    
-    func loadImage(imageUrl: String, cell: RecipeCell) {
-        guard let url = URL(string: imageUrl) else { return }
+    func loadImageInView(imageUrl: String, cell: UITableViewCell) {
+        guard
+            let url = URL(string: imageUrl),
+            let recipeCell = cell as? RecipeCell
+        else { return }
         
-        cell.imageViewer.af_setImage(
+        recipeCell.recipeImageView.af_setImage(
             withURL: url,
             placeholderImage: nil,
             filter: nil,
@@ -58,8 +58,8 @@ extension RecipesTableViewController {
             progressQueue: DispatchQueue.global(qos: .background),
             imageTransition: UIImageView.ImageTransition.crossDissolve(0.3),
             runImageTransitionIfCached: false
-        ) { (_) -> Void  in
-            cell.imageLoaderIndicator.stopAnimating()
+        ) { (_) -> Void in
+            recipeCell.imageLoaderIndicator.stopAnimating()
         }
     }
 }
