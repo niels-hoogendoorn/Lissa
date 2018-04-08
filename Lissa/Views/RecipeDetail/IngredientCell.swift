@@ -1,5 +1,5 @@
 //
-//  RecipeDetailCell.swift
+//  IngredientCell.swift
 //  Lissa
 //
 //  Created by Niels Hoogendoorn on 15/03/2018.
@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 class IngredientCell: UITableViewCell {
+    
+    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var ingredientName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

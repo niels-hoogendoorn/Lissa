@@ -31,6 +31,7 @@ class RecipeDetailTableViewController: UITableViewController {
     // MARK: - General
     
     var recipe: Recipe!
+    var ingredients: [Ingredient]?
     var gradientLayer: CAGradientLayer!
     
     override func viewDidLoad() {
@@ -44,4 +45,26 @@ class RecipeDetailTableViewController: UITableViewController {
         super.viewWillLayoutSubviews()
         gradientLayer.frame = headerContainer.bounds
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard
+            let ingredients = ingredients,
+            let cell = tableView.cellForRow(at: indexPath),
+            let activeCell = cell as? IngredientCell
+        else { return }
+        
+        let ingredient = ingredients[indexPath.row]
+        
+        if ingredient.checked {
+            activeCell.checkButton.setImage(#imageLiteral(resourceName: "ic_unchecked"), for: .normal)
+            activeCell.ingredientName.textColor = Constants.lissaDarkGray
+        } else {
+            activeCell.checkButton.setImage(#imageLiteral(resourceName: "ic_checkmark"), for: .normal)
+            activeCell.ingredientName.textColor = .lightGray
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+
+    }
+    
 }

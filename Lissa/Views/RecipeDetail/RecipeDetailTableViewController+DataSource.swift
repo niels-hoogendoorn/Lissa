@@ -13,9 +13,10 @@ extension RecipeDetailTableViewController {
     
     func fetchData() {
         loadImageInView(imageUrl: recipe.imageUrl, view: recipeImageView)
-        titleLabel.text = recipe.title
-        personLabel.text = "\(recipe.numberOfPersons)"
-        timeLabel.text = "\(recipe.minutes)"
+        titleLabel.text = recipe.title  
+        personLabel.text = "\(recipe.numberOfPersons as Int) person(s)"
+        timeLabel.text = "\(recipe.minutes as Int) minutes"
+        ingredients = recipe.ingredients
     }
     
     func loadImageInView(imageUrl: String, view: UIImageView) {
@@ -32,5 +33,31 @@ extension RecipeDetailTableViewController {
         ) { (_) -> Void in
             self.imageLoaderIndicator.stopAnimating()
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let ingredients = self.ingredients else { return 0 }
+        return ingredients.count
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath)
+        
+        guard
+            let ingredientCell = cell as? IngredientCell,
+            let ingredients = self.ingredients
+        else { return cell }
+        
+        let ingredient = ingredients[indexPath.row]
+        
+        ingredientCell.checkButton.setImage(ingredient.checked ? #imageLiteral(resourceName: "ic_checkmark") : #imageLiteral(resourceName: "ic_unchecked"), for: .normal)
+        ingredientCell.ingredientName.textColor = ingredient.checked ? .lightGray : Constants.lissaDarkGray
+        ingredientCell.ingredientName.text = ingredient.title
+        
+        return ingredientCell
     }
 }

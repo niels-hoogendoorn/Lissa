@@ -27,7 +27,7 @@ class RecipesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        tableView.reloadData()
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

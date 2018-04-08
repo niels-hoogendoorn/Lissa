@@ -14,4 +14,5 @@ struct Constants {
     static let lissaBlue = UIColor(hex: 0x114B5F)
     static let lissaPink = UIColor(hex: 0xF45B69)
     static let lissaGray = UIColor(hex: 0x777777)
+    static let lissaDarkGray = UIColor(hex: 0x222222)
 }
