@@ -28,4 +28,20 @@ class RecipeDetailTableViewController: UITableViewController {
     // MARK: - TableView
     
     
+    // MARK: - General
+    
+    var recipe: Recipe!
+    var gradientLayer: CAGradientLayer!
+    
+    override func viewDidLoad() {
+        fetchData()
+        gradientLayer = createGradientLayer(imageView: recipeImageView)
+        recipeImageView.layer.addSublayer(gradientLayer)
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        gradientLayer.frame = headerContainer.bounds
+    }
 }

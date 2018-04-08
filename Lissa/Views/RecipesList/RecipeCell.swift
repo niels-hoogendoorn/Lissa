@@ -29,7 +29,9 @@ class RecipeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        createGradientLayer()
+        gradientLayer = createGradientLayer(imageView: recipeImageView)
+        recipeImageView.layer.addSublayer(gradientLayer)
+        
         contentContainer.makeCard()
     }
     
@@ -38,16 +40,4 @@ class RecipeCell: UITableViewCell {
         gradientLayer.frame = bounds
     }
     
-    func createGradientLayer() {
-        let colorBottom = UIColor.black
-        let colorTop = UIColor.clear
-        let colors = [colorTop, colorBottom]
-        gradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.recipeImageView.bounds
-        
-        gradientLayer.colors = colors.map({$0.cgColor})
-        gradientLayer.startPoint = CGPoint(x:0.0, y:0.0)
-        gradientLayer.endPoint = CGPoint(x:0.0, y:1.4)
-        self.recipeImageView.layer.addSublayer(gradientLayer)
-    }
 }

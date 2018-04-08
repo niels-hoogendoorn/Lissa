@@ -60,5 +60,17 @@ extension UIView {
         self.layer.shadowOffset = shadowOffset
         self.layer.shadowRadius = shadowRadius
     }
-
+    
+    func createGradientLayer(imageView: UIImageView) -> CAGradientLayer {
+        let colorBottom = UIColor.black
+        let colorTop = UIColor.clear
+        let colors = [colorTop, colorBottom]
+        let layer = CAGradientLayer()
+        layer.frame = imageView.bounds
+        
+        layer.colors = colors.map({$0.cgColor})
+        layer.startPoint = CGPoint(x:0.0, y:0.0)
+        layer.endPoint = CGPoint(x:0.0, y:1.4)
+        return layer
+    }
 }

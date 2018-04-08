@@ -45,18 +45,23 @@ class RecipesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 16
     }
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let identifier = segue.identifier else { return }
         
-        if identifier == "to_recipe_detail" {
+        if identifier != "to_recipe_detail" {
             return
         }
         
-        guard let vc = segue.destination as? RecipeDetailTableViewController else {
+        guard let destination = segue.destination as? RecipeDetailTableViewController else {
             return
         }
         
+        if let cell = sender as? RecipeCell,
+            let indexPath = tableView.indexPath(for: cell) {
+            let chosenRecipe = recipes[indexPath.row]
+            destination.recipe = chosenRecipe
+        }
     }
 }
