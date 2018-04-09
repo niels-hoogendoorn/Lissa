@@ -37,16 +37,6 @@ class RecipesTableViewController: UITableViewController {
         
         cell.backgroundColor = .clear
     }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = .clear
-        return view
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 16
-    }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
