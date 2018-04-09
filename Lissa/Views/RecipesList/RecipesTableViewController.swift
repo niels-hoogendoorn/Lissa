@@ -23,6 +23,8 @@ class RecipesTableViewController: UITableViewController {
         recipeGeneratorButton.backgroundColor = Constants.lissaPink
         recipeGeneratorButton.layer.cornerRadius = 4
         
+        navigationController?.navigationBar.tintColor = .white
+        
         fetchRecipes()
     }
     

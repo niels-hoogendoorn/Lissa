@@ -11,14 +11,6 @@ import UIKit
 
 extension RecipeDetailTableViewController {
     
-    func fetchData() {
-        loadImageInView(imageUrl: recipe.imageUrl, view: recipeImageView)
-        titleLabel.text = recipe.title  
-        personLabel.text = "\(recipe.numberOfPersons as Int) person(s)"
-        timeLabel.text = "\(recipe.minutes as Int) minutes"
-        ingredients = recipe.ingredients
-    }
-    
     func loadImageInView(imageUrl: String, view: UIImageView) {
         guard let url = URL(string: imageUrl) else { return }
         

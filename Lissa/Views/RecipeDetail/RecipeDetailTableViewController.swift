@@ -35,10 +35,20 @@ class RecipeDetailTableViewController: UITableViewController {
     var gradientLayer: CAGradientLayer!
     
     override func viewDidLoad() {
-        fetchData()
+        displayData()
         gradientLayer = createGradientLayer(imageView: recipeImageView)
         recipeImageView.layer.addSublayer(gradientLayer)
         
+    }
+    
+    func displayData() {
+        loadImageInView(imageUrl: recipe.imageUrl, view: recipeImageView)
+        titleLabel.text = recipe.title
+        personLabel.text = "\(recipe.numberOfPersons as Int) person(s)"
+        personLabel.textColor = Constants.lissaGray
+        timeLabel.text = "\(recipe.minutes as Int) minutes"
+        timeLabel.textColor = Constants.lissaGray
+        ingredients = recipe.ingredients
     }
     
     override func viewWillLayoutSubviews() {
@@ -63,8 +73,7 @@ class RecipeDetailTableViewController: UITableViewController {
             activeCell.ingredientName.textColor = .lightGray
         }
         
-        tableView.deselectRow(at: indexPath, animated: true)
-
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }
