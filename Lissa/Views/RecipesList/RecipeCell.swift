@@ -33,6 +33,7 @@ class RecipeCell: UITableViewCell {
         recipeImageView.layer.addSublayer(gradientLayer)
         
         contentContainer.makeCard()
+        contentContainer.layer.masksToBounds = true
     }
     
     override func layoutSubviews() {
