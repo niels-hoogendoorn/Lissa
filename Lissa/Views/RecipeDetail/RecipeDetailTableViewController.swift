@@ -38,7 +38,8 @@ class RecipeDetailTableViewController: UITableViewController {
         displayData()
         gradientLayer = createGradientLayer(imageView: recipeImageView)
         recipeImageView.layer.addSublayer(gradientLayer)
-        
+        addButton()
+//        tableView.layoutIfNeeded()
     }
     
     func displayData() {
@@ -54,6 +55,21 @@ class RecipeDetailTableViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         gradientLayer.frame = headerContainer.bounds
+    }
+    
+    func addButton() {
+        let button = UIButton(frame: .zero)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        tableView.addSubview(button)
+
+        button.backgroundColor = Constants.lissaPink
+        
+        button.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 54).isActive = true
+        
+        button.leftAnchor.constraint(equalTo: tableView.leftAnchor).isActive = true
+        button.rightAnchor.constraint(equalTo: tableView.rightAnchor).isActive = true
+        button.bottomAnchor.constraint(equalTo: tableView.bottomAnchor).isActive = true
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
