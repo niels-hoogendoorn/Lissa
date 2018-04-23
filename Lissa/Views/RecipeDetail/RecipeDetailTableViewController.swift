@@ -34,15 +34,17 @@ class RecipeDetailTableViewController: UITableViewController {
     var ingredients: [Ingredient]?
     var gradientLayer: CAGradientLayer!
     
+    var prepTextAvailable: Bool = false
+    
     override func viewDidLoad() {
         displayData()
         gradientLayer = createGradientLayer(imageView: recipeImageView)
         recipeImageView.layer.addSublayer(gradientLayer)
-        addButton()
-//        tableView.layoutIfNeeded()
+        tableView.layoutIfNeeded()
     }
     
     func displayData() {
+        prepTextAvailable = recipe.preparationText != nil || recipe.preparationText != ""
         loadImageInView(imageUrl: recipe.imageUrl, view: recipeImageView)
         titleLabel.text = recipe.title
         personLabel.text = "\(recipe.numberOfPersons as Int) person(s)"
@@ -55,21 +57,6 @@ class RecipeDetailTableViewController: UITableViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         gradientLayer.frame = headerContainer.bounds
-    }
-    
-    func addButton() {
-        let button = UIButton(frame: .zero)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        tableView.addSubview(button)
-
-        button.backgroundColor = Constants.lissaPink
-        
-        button.widthAnchor.constraint(equalTo: tableView.widthAnchor).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 54).isActive = true
-        
-        button.leftAnchor.constraint(equalTo: tableView.leftAnchor).isActive = true
-        button.rightAnchor.constraint(equalTo: tableView.rightAnchor).isActive = true
-        button.bottomAnchor.constraint(equalTo: tableView.bottomAnchor).isActive = true
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -90,6 +77,35 @@ class RecipeDetailTableViewController: UITableViewController {
         }
         
         tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 98
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {        
+        let buttonViewHeight: CGFloat = 50
+        let footerView = UIView(frame: .zero)
+        let button = UIButton(frame: .zero)
+        
+        button.translatesAutoresizingMaskIntoConstraints = false
+        footerView.addSubview(button)
+        
+        footerView.backgroundColor = .white
+        footerView.heightAnchor.constraint(equalToConstant: buttonViewHeight + 48).isActive = true
+        
+        button.setTitle(.differentRecipe, for: .normal)
+        button.setImage(#imageLiteral(resourceName: "ic_repeat"), for: .normal)
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, 16, 0, 0);
+        button.backgroundColor = Constants.lissaPink
+        button.layer.cornerRadius = 4
+        
+        button.leftAnchor.constraint(equalTo: footerView.leftAnchor, constant: 16).isActive = true
+        button.rightAnchor.constraint(equalTo: footerView.rightAnchor, constant: -16).isActive = true
+        button.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 24).isActive = true
+        button.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -24).isActive = true
+        
+        return footerView
     }
     
 }

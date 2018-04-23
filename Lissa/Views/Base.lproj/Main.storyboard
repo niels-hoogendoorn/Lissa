@@ -235,7 +235,7 @@
         <scene sceneID="3Vn-o6-rHc">
             <objects>
                 <tableViewController id="54k-JD-EXI" customClass="RecipeDetailTableViewController" customModule="Lissa" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ixB-uw-v6u">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="98" estimatedSectionFooterHeight="98" id="ixB-uw-v6u">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -407,6 +407,31 @@
                                     <outlet property="checkButton" destination="5zw-Qd-h58" id="3yf-gx-WZj"/>
                                     <outlet property="ingredientName" destination="f87-ae-E7B" id="jCv-hk-7sy"/>
                                     <outlet property="seperatorLine" destination="IXs-BL-FrE" id="FVY-TV-dyI"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="PreparationCell" id="uS3-js-rdJ" customClass="PreparationCell" customModule="Lissa" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="247" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uS3-js-rdJ" id="aH8-px-BuU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjp-5I-qVJ">
+                                            <rect key="frame" x="16" y="0.5" width="343" height="44"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bjp-5I-qVJ" firstAttribute="centerY" secondItem="aH8-px-BuU" secondAttribute="centerY" id="7Q8-62-LKv"/>
+                                        <constraint firstItem="bjp-5I-qVJ" firstAttribute="height" secondItem="aH8-px-BuU" secondAttribute="height" id="Njv-Nc-aEt"/>
+                                        <constraint firstItem="bjp-5I-qVJ" firstAttribute="leading" secondItem="aH8-px-BuU" secondAttribute="leading" constant="16" id="XO5-co-OZb"/>
+                                        <constraint firstAttribute="trailing" secondItem="bjp-5I-qVJ" secondAttribute="trailing" constant="16" id="tvO-Gg-zGn"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="preparationTextLabel" destination="bjp-5I-qVJ" id="IUD-n4-VJE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
