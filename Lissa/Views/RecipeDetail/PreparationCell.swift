@@ -16,5 +16,7 @@ class PreparationCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         preparationTextLabel.textColor = Constants.lissaDarkGray
+        preparationTextLabel.font = UIFont.init(name: "Helvetica", size: 16)
+    
     }
 }

@@ -39,14 +39,11 @@ extension RecipeDetailTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("Indexpath.row = \(indexPath.row)")
         var numberOfRows = 0
         if let ingredientsAmount = recipe.ingredients?.count {
             numberOfRows += ingredientsAmount
         }
         if prepTextAvailable { numberOfRows += 1 }
-        
-        // After making one section, just check if it's the last row
         
         if prepTextAvailable, indexPath.row == numberOfRows - 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PreparationCell", for: indexPath)

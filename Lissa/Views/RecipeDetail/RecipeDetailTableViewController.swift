@@ -25,6 +25,7 @@ class RecipeDetailTableViewController: UITableViewController {
     @IBOutlet weak var personLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
+    @IBOutlet weak var questionLabel: UILabel!
     // MARK: - TableView
     
     
@@ -51,6 +52,8 @@ class RecipeDetailTableViewController: UITableViewController {
         personLabel.textColor = Constants.lissaGray
         timeLabel.text = "\(recipe.minutes as Int) minutes"
         timeLabel.textColor = Constants.lissaGray
+        questionLabel.text = .whatDoYouNeed
+        questionLabel.textColor = Constants.lissaDarkGray
         ingredients = recipe.ingredients
     }
     
@@ -80,7 +83,7 @@ class RecipeDetailTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 98
+        return 74
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {        
@@ -92,7 +95,7 @@ class RecipeDetailTableViewController: UITableViewController {
         footerView.addSubview(button)
         
         footerView.backgroundColor = .white
-        footerView.heightAnchor.constraint(equalToConstant: buttonViewHeight + 48).isActive = true
+        footerView.heightAnchor.constraint(equalToConstant: buttonViewHeight + 24).isActive = true
         
         button.setTitle(.differentRecipe, for: .normal)
         button.setImage(#imageLiteral(resourceName: "ic_repeat"), for: .normal)
@@ -102,8 +105,8 @@ class RecipeDetailTableViewController: UITableViewController {
         
         button.leftAnchor.constraint(equalTo: footerView.leftAnchor, constant: 16).isActive = true
         button.rightAnchor.constraint(equalTo: footerView.rightAnchor, constant: -16).isActive = true
-        button.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 24).isActive = true
-        button.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -24).isActive = true
+        button.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 16).isActive = true
+        button.bottomAnchor.constraint(equalTo: footerView.bottomAnchor, constant: -16).isActive = true
         
         return footerView
     }
