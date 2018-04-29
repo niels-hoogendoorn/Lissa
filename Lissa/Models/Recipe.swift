@@ -16,8 +16,9 @@ struct Recipe: Decodable {
     let imageUrl: String!
     let ingredients: [Ingredient]?
     let preparationText: String?
+    let userName: String?
     
-    init(id: Int, title: String, numberOfPersons: Int, minutes: Int, imageUrl: String, ingredients: [Ingredient], preparationText: String) {
+    init(id: Int, title: String, numberOfPersons: Int, minutes: Int, imageUrl: String, ingredients: [Ingredient], preparationText: String, userName: String) {
         self.id = id
         self.title = title
         self.numberOfPersons = numberOfPersons
@@ -25,5 +26,6 @@ struct Recipe: Decodable {
         self.imageUrl = imageUrl
         self.ingredients = ingredients
         self.preparationText = preparationText
+        self.userName = userName
     }
 }

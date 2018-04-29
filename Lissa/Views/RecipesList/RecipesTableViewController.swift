@@ -23,7 +23,7 @@ class RecipesTableViewController: UITableViewController {
         recipeGeneratorButton.backgroundColor = Constants.lissaPink
         recipeGeneratorButton.layer.cornerRadius = 4
         
-        navigationController?.navigationBar.tintColor = .white
+        setNavigationStyle()
         
         fetchRecipes()
     }
@@ -36,6 +36,13 @@ class RecipesTableViewController: UITableViewController {
         guard let cell = cell as? RecipeCell else { return }
         
         cell.backgroundColor = .clear
+    }
+    
+    func setNavigationStyle() {
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.tintColor = Constants.lissaDarkGray
+        navigationController?.navigationItem.backBarButtonItem?.title = " "
+        UIApplication.shared.statusBarStyle = .default
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

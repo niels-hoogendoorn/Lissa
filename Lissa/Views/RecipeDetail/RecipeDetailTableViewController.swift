@@ -19,11 +19,12 @@ class RecipeDetailTableViewController: UITableViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var informationContainer: UIView!
-    @IBOutlet weak var personViewContainer: UIView!
-    @IBOutlet weak var timeViewContainer: UIView!
+//    @IBOutlet weak var personViewContainer: UIView!
+//    @IBOutlet weak var timeViewContainer: UIView!
     
-    @IBOutlet weak var personLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var personAndTimeLabel: UILabel!
     
     @IBOutlet weak var questionLabel: UILabel!
     // MARK: - TableView
@@ -38,6 +39,7 @@ class RecipeDetailTableViewController: UITableViewController {
     var prepTextAvailable: Bool = false
     
     override func viewDidLoad() {
+        
         displayData()
         gradientLayer = createGradientLayer(imageView: recipeImageView)
         recipeImageView.layer.addSublayer(gradientLayer)
@@ -48,13 +50,19 @@ class RecipeDetailTableViewController: UITableViewController {
         prepTextAvailable = recipe.preparationText != nil || recipe.preparationText != ""
         loadImageInView(imageUrl: recipe.imageUrl, view: recipeImageView)
         titleLabel.text = recipe.title
-        personLabel.text = "\(recipe.numberOfPersons as Int) person(s)"
-        personLabel.textColor = Constants.lissaGray
-        timeLabel.text = "\(recipe.minutes as Int) minutes"
-        timeLabel.textColor = Constants.lissaGray
+        
+        userLabel.text = "\(recipe.userName ?? "")"
+        userLabel.textColor = Constants.lissaGray
+        
+        personAndTimeLabel.text = "\(recipe.numberOfPersons as Int) persons • \(recipe.minutes as Int) minutes"
+        personAndTimeLabel.textColor = .lightGray
         questionLabel.text = .whatDoYouNeed
         questionLabel.textColor = Constants.lissaDarkGray
         ingredients = recipe.ingredients
+        
+        profileImage.image = #imageLiteral(resourceName: "dummy_profile_pic")
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
+        profileImage.layer.masksToBounds = true
     }
     
     override func viewWillLayoutSubviews() {

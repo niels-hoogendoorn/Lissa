@@ -11,4 +11,5 @@ import Foundation
 extension String {
     static let differentRecipe = "Ander recept"
     static let whatDoYouNeed = "Wat heb je nodig?"
+    static let empty = ""
 }
