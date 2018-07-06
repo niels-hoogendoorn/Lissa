@@ -18,16 +18,28 @@ class RecipeCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var informationContainer: UIView!
-    @IBOutlet weak var personViewContainer: UIView!
-    @IBOutlet weak var timeViewContainer: UIView!
     
-    @IBOutlet weak var personLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var profileButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    @IBOutlet weak var recipeInfoLabel: UILabel!
+    
+    //    @IBOutlet weak var personViewContainer: UIView!
+//    @IBOutlet weak var timeViewContainer: UIView!
+//
+//    @IBOutlet weak var personLabel: UILabel!
+//    @IBOutlet weak var timeLabel: UILabel!
     
     var gradientLayer: CAGradientLayer!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        nameLabel.textColor = Constants.lissaDarkGray
+        recipeInfoLabel.textColor = Constants.lissaGray
+        
+        profileButton.imageView?.layer.cornerRadius = 42 / 2
         
         gradientLayer = createGradientLayer(imageView: recipeImageView)
         recipeImageView.layer.addSublayer(gradientLayer)

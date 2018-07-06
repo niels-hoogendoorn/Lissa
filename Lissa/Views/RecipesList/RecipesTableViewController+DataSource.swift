@@ -31,14 +31,18 @@ extension RecipesTableViewController {
         
         guard
             let title = recipes[indexPath.row].title,
+            let name = recipes[indexPath.row].userName,
             let numberOfPersons = recipes[indexPath.row].numberOfPersons,
             let minutes = recipes[indexPath.row].minutes,
             let imageUrl = recipes[indexPath.row].imageUrl
         else { return UITableViewCell() }
         
-        loadImageInView(imageUrl: imageUrl, cell: recipeCell)
-        recipeCell.personLabel.text = "\(numberOfPersons) persons"
-        recipeCell.timeLabel.text = "\(minutes) minutes"
+//        loadImageInView(imageUrl: imageUrl, cell: recipeCell)
+        recipeCell.recipeImageView.image = #imageLiteral(resourceName: "sample1")
+        recipeCell.nameLabel.text = "\(name)"
+        recipeCell.recipeInfoLabel.text = "\(numberOfPersons) personen • \(minutes) minuten"
+//        recipeCell.personLabel.text = "\(numberOfPersons) persons"
+//        recipeCell.timeLabel.text = "\(minutes) minutes"
         recipeCell.titleLabel.text = "\(title)"
         
         return recipeCell

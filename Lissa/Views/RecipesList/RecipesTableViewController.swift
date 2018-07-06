@@ -12,7 +12,8 @@ import UIKit
 class RecipesTableViewController: UITableViewController {
     
     @IBOutlet weak var recipeGeneratorContainer: UIView!
-    @IBOutlet weak var recipeGeneratorButton: UIView!
+    @IBOutlet weak var recipeGeneratorButton: UIButton!
+    @IBOutlet weak var recipeFavoritesButton: UIButton!
     
     var recipes: [Recipe] = []
     
@@ -20,8 +21,8 @@ class RecipesTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = Constants.lissaBlue
         
-        recipeGeneratorButton.backgroundColor = Constants.lissaPink
-        recipeGeneratorButton.layer.cornerRadius = 4
+        setButton(recipeGeneratorButton)
+        setButton(recipeFavoritesButton)
         
         setNavigationStyle()
         
@@ -62,5 +63,11 @@ class RecipesTableViewController: UITableViewController {
             let chosenRecipe = recipes[indexPath.row]
             destination.recipe = chosenRecipe
         }
+    }
+    
+    func setButton(_ button: UIButton) {
+        button.backgroundColor = Constants.lissaPink
+        button.layer.cornerRadius = 4
+        button.setTitleColor(.white, for: .normal)
     }
 }
