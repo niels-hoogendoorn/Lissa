@@ -29,6 +29,8 @@
 		A68770BF204C915D000528C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A68770BD204C915D000528C0 /* LaunchScreen.storyboard */; };
 		A68770C7204C9CC6000528C0 /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68770C6204C9CC6000528C0 /* RecipesTableViewController.swift */; };
 		A68770C9204C9DAD000528C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68770C8204C9DAD000528C0 /* Constants.swift */; };
+		A69A88E920EF8D1A00909E2C /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69A88E820EF8D1A00909E2C /* UINavigationController+Extension.swift */; };
+		A6AE443920FB7FAD00B9FBF4 /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AE443820FB7FAD00B9FBF4 /* AddRecipe.storyboard */; };
 		A6D10FAE209628C600D46CCA /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D10FAD209628C600D46CCA /* CustomNavBar.swift */; };
 		A6D7F7D0208E4902006513E4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7F7CF208E4902006513E4 /* String+Extension.swift */; };
 		A6D7F7D2208F0C9A006513E4 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7F7D1208F0C9A006513E4 /* UILabel+Extension.swift */; };
@@ -66,6 +68,8 @@
 		A68770C0204C915D000528C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A68770C6204C9CC6000528C0 /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		A68770C8204C9DAD000528C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A69A88E820EF8D1A00909E2C /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		A6AE443820FB7FAD00B9FBF4 /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
 		A6D10FAD209628C600D46CCA /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		A6D7F7CF208E4902006513E4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A6D7F7D1208F0C9A006513E4 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				A65E47B2207A3B5600EE5721 /* UIViewController+Extension.swift */,
 				A6D7F7CF208E4902006513E4 /* String+Extension.swift */,
 				A6D7F7D1208F0C9A006513E4 /* UILabel+Extension.swift */,
+				A69A88E820EF8D1A00909E2C /* UINavigationController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				A6662FB020566620000E9E08 /* RecipesList */,
 				A68770B8204C915D000528C0 /* Main.storyboard */,
 				A68770BD204C915D000528C0 /* LaunchScreen.storyboard */,
+				A6AE443820FB7FAD00B9FBF4 /* AddRecipe.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6AE443920FB7FAD00B9FBF4 /* AddRecipe.storyboard in Resources */,
 				A68770BF204C915D000528C0 /* LaunchScreen.storyboard in Resources */,
 				A68770BC204C915D000528C0 /* Assets.xcassets in Resources */,
 				A68770BA204C915D000528C0 /* Main.storyboard in Resources */,
@@ -393,6 +400,7 @@
 				A65E47B3207A3B5600EE5721 /* UIViewController+Extension.swift in Sources */,
 				A6802629205840B10074A6C0 /* Ingredient.swift in Sources */,
 				A6FC10212055932900C6DF77 /* recipesJson.swift in Sources */,
+				A69A88E920EF8D1A00909E2C /* UINavigationController+Extension.swift in Sources */,
 				A6147EAC205A550E00C4BE8C /* IngredientCell.swift in Sources */,
 				A65E4884207C896000EE5721 /* EndPointType.swift in Sources */,
 				A65E488F207C8CE000EE5721 /* ParameterEncoding.swift in Sources */,

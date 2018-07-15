@@ -25,12 +25,6 @@ class RecipeCell: UITableViewCell {
     
     @IBOutlet weak var recipeInfoLabel: UILabel!
     
-    //    @IBOutlet weak var personViewContainer: UIView!
-//    @IBOutlet weak var timeViewContainer: UIView!
-//
-//    @IBOutlet weak var personLabel: UILabel!
-//    @IBOutlet weak var timeLabel: UILabel!
-    
     var gradientLayer: CAGradientLayer!
     
     override func awakeFromNib() {
@@ -46,6 +40,8 @@ class RecipeCell: UITableViewCell {
         
         contentContainer.makeCard()
         contentContainer.layer.masksToBounds = true
+        
+        // isFavorite?
     }
     
     override func layoutSubviews() {
