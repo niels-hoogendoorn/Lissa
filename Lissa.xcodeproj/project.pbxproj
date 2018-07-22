@@ -31,6 +31,8 @@
 		A68770C9204C9DAD000528C0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68770C8204C9DAD000528C0 /* Constants.swift */; };
 		A69A88E920EF8D1A00909E2C /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69A88E820EF8D1A00909E2C /* UINavigationController+Extension.swift */; };
 		A6AE443920FB7FAD00B9FBF4 /* AddRecipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6AE443820FB7FAD00B9FBF4 /* AddRecipe.storyboard */; };
+		A6AE443E20FB852200B9FBF4 /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AE443D20FB852200B9FBF4 /* AddRecipeViewController.swift */; };
+		A6AE444020FB892600B9FBF4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6AE443F20FB892600B9FBF4 /* UIView+Extension.swift */; };
 		A6D10FAE209628C600D46CCA /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D10FAD209628C600D46CCA /* CustomNavBar.swift */; };
 		A6D7F7D0208E4902006513E4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7F7CF208E4902006513E4 /* String+Extension.swift */; };
 		A6D7F7D2208F0C9A006513E4 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6D7F7D1208F0C9A006513E4 /* UILabel+Extension.swift */; };
@@ -70,6 +72,8 @@
 		A68770C8204C9DAD000528C0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A69A88E820EF8D1A00909E2C /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		A6AE443820FB7FAD00B9FBF4 /* AddRecipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddRecipe.storyboard; sourceTree = "<group>"; };
+		A6AE443D20FB852200B9FBF4 /* AddRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
+		A6AE443F20FB892600B9FBF4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A6D10FAD209628C600D46CCA /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
 		A6D7F7CF208E4902006513E4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A6D7F7D1208F0C9A006513E4 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				A6D7F7CF208E4902006513E4 /* String+Extension.swift */,
 				A6D7F7D1208F0C9A006513E4 /* UILabel+Extension.swift */,
 				A69A88E820EF8D1A00909E2C /* UINavigationController+Extension.swift */,
+				A6AE443F20FB892600B9FBF4 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				A6D10FAC209628B100D46CCA /* Helper classes */,
 				A6147EA6205A54BB00C4BE8C /* RecipeDetail */,
 				A6662FB020566620000E9E08 /* RecipesList */,
+				A6AE443C20FB850300B9FBF4 /* AddRecipe */,
 				A68770B8204C915D000528C0 /* Main.storyboard */,
 				A68770BD204C915D000528C0 /* LaunchScreen.storyboard */,
 				A6AE443820FB7FAD00B9FBF4 /* AddRecipe.storyboard */,
@@ -241,6 +247,14 @@
 				A68770C0204C915D000528C0 /* Info.plist */,
 			);
 			path = Lissa;
+			sourceTree = "<group>";
+		};
+		A6AE443C20FB850300B9FBF4 /* AddRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				A6AE443D20FB852200B9FBF4 /* AddRecipeViewController.swift */,
+			);
+			path = AddRecipe;
 			sourceTree = "<group>";
 		};
 		A6D10FAC209628B100D46CCA /* Helper classes */ = {
@@ -413,9 +427,11 @@
 				A6D7F7D0208E4902006513E4 /* String+Extension.swift in Sources */,
 				A63E6D98204DEC7500965192 /* RecipesTableViewController+DataSource.swift in Sources */,
 				A66D20C82056676000471B91 /* UIView+CALayer.swift in Sources */,
+				A6AE443E20FB852200B9FBF4 /* AddRecipeViewController.swift in Sources */,
 				A65E4889207C8B9D00EE5721 /* HTTPMethod.swift in Sources */,
 				A63E6D9C204DF03A00965192 /* Recipe.swift in Sources */,
 				A65E488B207C8BF700EE5721 /* HTTPTask.swift in Sources */,
+				A6AE444020FB892600B9FBF4 /* UIView+Extension.swift in Sources */,
 				A68770C7204C9CC6000528C0 /* RecipesTableViewController.swift in Sources */,
 				A6147EAA205A54EA00C4BE8C /* RecipeDetailTableViewController+DataSource.swift in Sources */,
 				A65E4895207C91F300EE5721 /* NetworkRouter.swift in Sources */,

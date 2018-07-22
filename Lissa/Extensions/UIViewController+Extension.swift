@@ -23,4 +23,19 @@ extension UIViewController {
         layer.endPoint = CGPoint(x:0.0, y:1.4)
         return layer
     }
+    
+    func addCustomNavBar(navItem: UINavigationItem, pageTitle: String, pageLogo: UIImage?, textFirst: Bool = true, textColor: UIColor = .lightGray) {
+        self.navigationController?.navigationBar.tintColor = .lightGray
+        let customBackButton = UIBarButtonItem(image: #imageLiteral(resourceName: "ic_back_button_light"), style: .done, target: self, action: #selector(goBack))
+        navItem.hidesBackButton = true
+        navItem.leftBarButtonItem = customBackButton
+        let customTitleView = UIView(frame: .zero)
+        customTitleView.makeViewWithTitleAndImage(title: pageTitle, image: pageLogo, textFirst: textFirst, textColor: textColor)
+        navItem.titleView = customTitleView
+
+    }
+    
+    @objc func goBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }

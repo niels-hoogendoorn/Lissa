@@ -3,15 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "RecipesTableViewController.viewDidLoad():RecipesTableViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AddRecipeViewController.viewDidLoad():AddRecipeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "customTitleView.frame.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RecipesTableViewController.fetchRecipes():RecipesTableViewController+DataSource.swift">
          <PersistentStrings>
             <PersistentString
                value = "recipes">
             </PersistentString>
          </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "RecipesTableViewController.viewDidLoad():RecipesTableViewController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
