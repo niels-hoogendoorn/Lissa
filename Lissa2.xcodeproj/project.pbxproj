@@ -62,7 +62,7 @@
 		A65E4896207CA98900EE5721 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A66D20C72056676000471B91 /* UIView+CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CALayer.swift"; sourceTree = "<group>"; };
 		A6802628205840B10074A6C0 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		A68770B1204C915D000528C0 /* Lissa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lissa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A68770B1204C915D000528C0 /* Lissa2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lissa2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A68770B4204C915D000528C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A68770B9204C915D000528C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A68770BB204C915D000528C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		A68770B2204C915D000528C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A68770B1204C915D000528C0 /* Lissa.app */,
+				A68770B1204C915D000528C0 /* Lissa2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -276,9 +276,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A68770B0204C915D000528C0 /* Lissa */ = {
+		A68770B0204C915D000528C0 /* Lissa2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A68770C3204C915D000528C0 /* Build configuration list for PBXNativeTarget "Lissa" */;
+			buildConfigurationList = A68770C3204C915D000528C0 /* Build configuration list for PBXNativeTarget "Lissa2" */;
 			buildPhases = (
 				20144760EC5DD097E7B26AFB /* [CP] Check Pods Manifest.lock */,
 				A68770AD204C915D000528C0 /* Sources */,
@@ -291,9 +291,9 @@
 			);
 			dependencies = (
 			);
-			name = Lissa;
+			name = Lissa2;
 			productName = Lissa;
-			productReference = A68770B1204C915D000528C0 /* Lissa.app */;
+			productReference = A68770B1204C915D000528C0 /* Lissa2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -312,7 +312,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A68770AC204C915D000528C0 /* Build configuration list for PBXProject "Lissa" */;
+			buildConfigurationList = A68770AC204C915D000528C0 /* Build configuration list for PBXProject "Lissa2" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -325,7 +325,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A68770B0204C915D000528C0 /* Lissa */,
+				A68770B0204C915D000528C0 /* Lissa2 */,
 			);
 		};
 /* End PBXProject section */
@@ -578,7 +578,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2G429TK35T;
 				INFOPLIST_FILE = Lissa/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Appical.Lissa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,7 +598,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2G429TK35T;
 				INFOPLIST_FILE = Lissa/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Appical.Lissa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,7 +612,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A68770AC204C915D000528C0 /* Build configuration list for PBXProject "Lissa" */ = {
+		A68770AC204C915D000528C0 /* Build configuration list for PBXProject "Lissa2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A68770C1204C915D000528C0 /* Debug */,
@@ -621,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A68770C3204C915D000528C0 /* Build configuration list for PBXNativeTarget "Lissa" */ = {
+		A68770C3204C915D000528C0 /* Build configuration list for PBXNativeTarget "Lissa2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A68770C4204C915D000528C0 /* Debug */,
